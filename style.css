@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.glass-nav {
+    background: rgba(5, 8, 16, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}    
+/* Product Card Styling */
+.product-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(34, 211, 238, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(34, 211, 238, 0.1);
+}
+
+/* A4 Aspect Ratio for Images */
+.img-container {
+    width: 100%;
+    aspect-ratio: 1 / 1.414; /* A4 Paper Ratio */
+    background: #111;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Discount Badge */
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #22c55e;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+    z-index: 10;
+}
+
+/* Prices */
+.price-tag {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.old-price {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-decoration: line-through;
+    margin-left: 8px;
+}
+
+/* Buy Now Button */
+.buy-btn {
+    width: 100%;
+    background: transparent;
+    border: 1.5px solid #fff;
+    color: #fff;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #fff;
+    color: #000;
+}
+/* Facebook Grid එක පේළියට 5ක් පෙන්වීමට */
+#fb-post-grid {
+    display: grid;
+    /* 180px ට වඩා අඩු කරන බැවින් පේළියට 5ක් ලස්සනට වැටේ */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 15px;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Design Store එකේ වගේ Card එක සකස් කිරීම */
+.small-card {
+    background: #111 !important; /* තද කළු පැහැය */
+    border-radius: 12px !important;
+    padding: 0 !important; /* Card එක වටේ හිස් ඉඩ ඉවත් කළා */
+    border: 1px solid #111 !important;
+    text-align: center;
+}
+
+.small-card .img-container {
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 12px 12px 0 0 !important; /* ඉහළ මුළු පමණක් රවුම් කළා */
+    margin-bottom: 0 !important;
+}
+
+/* Card එකේ පල්ලෙහා තොරතුරු */
+.small-card .info-area {
+    padding: 12px 8px;
+}
+
+.small-card .price-tag {
+    font-size: 16px !important;
+    color: #fff !important;
+}
+
+.small-card .old-price {
+    font-size: 11px !important;
+    color: #6b7280 !important;
+}
+
+.small-card .title-text {
+    font-size: 11px !important;
+    text-transform: uppercase;
+    color: #9ca3af !important;
+    margin-top: 5px;
+}
+
+/* Buy Button එක පින්තූරයේ වගේම පල්ලෙහාට */
+.small-card .buy-btn {
+    border-radius: 0 0 12px 12px !important;
+    border: none !important;
+    border-top: 1px solid #1f2937 !important;
+    margin-top: 10px !important;
+    background: rgba(255,255,255,0.05) !important;
+}
+
+.small-card .buy-btn:hover {
+    background: #fff !important;
+    color: #000 !important;
+}
+/* පින්තූරය තීරු දෙකක පළලක් ගැනීමට (Wide View) */
+.wide-card {
+    grid-column: span 2;
+}
+
+/* 1:1 කොටු හැඩය ඉවත් කර පින්තූරයේ සම්පූර්ණ උස පෙන්වීම (Full Post) */
+.auto-height {
+    aspect-ratio: auto !important;
+    height: auto !important;
+}
+
+.auto-height img {
+    object-fit: contain !important; /* පින්තූරය කැපී යාම (Crop) වළක්වයි */
+    height: auto !important;
+    width: 100% !important;
+}
+
+/* Mobile දුරකථන වලදී එක් තීරුවක පෙනුමට පත් කිරීම */
+@media (max-width: 600px) {
+    .wide-card {
+        grid-column: span 1;
+    }
+}
+/* Card එක ඇතුළත content එක නිවැරදිව තැබීමට */
+.small-card.wide-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* සියල්ල ඉහළට තල්ලු කරයි */
+    height: fit-content !important; /* අනවශ්‍ය උස ඉවත් කරයි */
+}
+
+/* පින්තූරය යට ඇති කළු පැහැති කොටස */
+.small-card.wide-card .info-area {
+    margin-top: auto; /* බටන් එක පල්ලෙහාටම තල්ලු කරයි */
+    width: 100%;
+}
+
+/* Grid එකේ උස පාලනය */
+#fb-post-grid {
+    align-items: start; /* සියලුම Cards ඉහළ සිට එකම මට්ටමකට පටන් ගනී */
+}
+.small-card .img-container.auto-height {
+    aspect-ratio: auto !important;
+    height: auto !important;
+}
+
+.small-card .img-container.auto-height img {
+    height: auto !important;
+    width: 100% !important;
+    object-fit: contain !important;
+}
