@@ -4,10 +4,12 @@ const myProducts = [
     { id: 2, title: "A3 Tute Cover - Concept 02", oldPrice: 1000, newPrice: 600, img: "1maths.jpg", category: "Education" },
     { id: 3, title: "A3 Tute Cover - Concept 03", oldPrice: 1500, newPrice: 800, img: "1history.jpg", category: "Creative Tute" },
     { id: 4, title: "A3 Tute Cover - Concept 04", oldPrice: 1500, newPrice: 1000, img: "1music.jpg", category: "Creative Tute" },
-    { id: 5, title: "A3 Tute Cover - Concept 05", oldPrice: 1100, newPrice: 650, img: "1english.jpg", category: "Game Over Edition" },
-    { id: 6, title: "A3 Tute Cover - Concept 06", oldPrice: 1100, newPrice: 650, img: "1white.jpg", category: "Education" },
-    { id: 7, title: "A3 Tute Cover - Concept 07", oldPrice: 1000, newPrice: 500, img: "1ict.jpg", category: "Education" },
-    { id: 8, title: "A3 Tute Cover - Concept 08", oldPrice: 1500, newPrice: 800, img: "1science.jpg", category: "Education" }
+    { id: 5, title: "A3 Tute Cover - Concept 05", oldPrice: 1100, newPrice: 500, img: "1english.jpg", category: "Game Over Edition" },
+    { id: 6, title: "A3 Tute Cover - Concept 06", oldPrice: 1100, newPrice: 500, img: "1white.jpg", category: "Education" },
+    { id: 7, title: "A3 Tute Cover - Concept 07", oldPrice: 1000, newPrice: 500, img: "eliphent design.png", category: "Education" },
+    { id: 8, title: "A3 Tute Cover - Concept 08", oldPrice: 1000, newPrice: 500, img: "folower design,png", category: "Education" },
+    { id: 9, title: "A3 Tute Cover - Concept 09", oldPrice: 1000, newPrice: 800, img: "biology.jpg", category: "Education" },
+    { id: 10, title: "A3 Tute Cover - Concept 10", oldPrice: 1000, newPrice: 800, img: "cargo ship.png", category: "Education" }
 ];
 
 // --- 2. Facebook Post Designs දත්ත ---
